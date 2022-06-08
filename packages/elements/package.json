@@ -1,0 +1,8 @@
+{
+  "name": "@artemis-mobile/elements",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mina W Alphonce",
+  "license": "MIT",
+  "private": true
+}

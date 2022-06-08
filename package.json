@@ -1,0 +1,14 @@
+{
+  "name": "artemis-mobile",
+  "version": "1.0.0",
+  "author": "Mina W Alphonce",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "app": "yarn workspace @artemis-mobile/app"
+  }
+}
