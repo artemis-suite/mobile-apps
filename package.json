@@ -9,6 +9,8 @@
     "packages/*"
   ],
   "scripts": {
-    "app": "yarn workspace @artemis-mobile/app"
+    "app": "yarn workspace @artemis-mobile/app",
+    "elements": "yarn workspace @artemis-mobile/elements",
+    "kitchen-sink": "yarn workspace @artemis-mobile/kitchen-sink"
   }
 }
