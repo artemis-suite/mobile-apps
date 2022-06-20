@@ -1,8 +1,43 @@
 {
   "name": "@artemis-mobile/elements",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Mina W Alphonce",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "main": "src/index.tsx",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@shopify/restyle": "^2.1.0",
+    "expo": "~45.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-native": "0.68.2",
+    "react-native-web": "0.17.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@types/jest": "^28.1.2",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "~0.67.6",
+    "babel-jest": "^28.1.1",
+    "jest": "^28.1.1",
+    "typescript": "~4.3.5"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/?!(react-native)"
+    ],
+    "collectCoverage": true
+  }
 }
