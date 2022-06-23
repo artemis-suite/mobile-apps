@@ -9,9 +9,17 @@ const theme = createTheme({
         "primary/500": "#4E74F9",
         "prinary/600": "#083CF0",
 
+        "gary/100": "#F4F4F8",
+        "gray/200": "#E9E9F1",
+        "gray/300": "#CCCCD6",
+        "gray/400": "#A3A3AE",
+        "gray/500": "#6F6F79",
+        "gray/600": "#515168",
+
         light: "#fff",
         dark: "#161C2B",
-        background: "#FAFAFA"
+        background: "#FAFAFA",
+        transparent: "transparent"
     },
     spacing: {
         s: 8,
@@ -28,7 +36,7 @@ const theme = createTheme({
         tablet: 768
     },
     borderRadii: {
-        m: 24
+        m: 12
     },
     textVariants: {
         h1: {
@@ -36,28 +44,28 @@ const theme = createTheme({
             fontSize: 34,
             fontWeight: "700",
             fontStyle: "normal",
-            lineHeight: 34,
+            lineHeight: 36,
         },
         h2: {
             fontFamily: "Poppins-Bold",
             fontSize: 32,
             fontWeight: "700",
             fontStyle: "normal",
-            lineHeight: 32,
+            lineHeight: 36,
         },
         h3: {
             fontFamily: "Poppins-Bold",
             fontSize: 24,
             fontWeight: "700",
             fontStyle: "normal",
-            lineHeight: 24
+            lineHeight: 26
         },
         h4: {
             fontFamily: "Poppins-SemiBold",
             fontSize: 20,
             fontWeight: "600",
             fontStyle: "normal",
-            lineHeight: 20
+            lineHeight: 22
         },
         p1b: {
             fontFamily: "Poppins-SemiBold",
@@ -71,7 +79,7 @@ const theme = createTheme({
             fontSize: 16,
             fontWeight: "400",
             fontStyle: "normal",
-            lineHeight: 16,
+            lineHeight: 18,
         },
         p2b: {
             fontFamily: "Poppins-Medium",
@@ -85,7 +93,7 @@ const theme = createTheme({
             fontSize: 14,
             fontWeight: "400",
             fontStyle: "normal",
-            lineHeight: 14,
+            lineHeight: 16,
         },
         p3b: {
             fontFamily: "Poppins-Medium",
