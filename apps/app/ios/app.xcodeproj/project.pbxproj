@@ -19,6 +19,10 @@
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 		EC2D523745D54C4DBD90F5E5 /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3E2133F10D848028DCA9BCF /* Poppins-SemiBold.otf */; };
+		5EF275AC447A4A6CBB0ABB19 /* NotoSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BC82E42D0CB49CE93E4755E /* NotoSansArabic-Bold.ttf */; };
+		C26FF8EBB7BE4A1F87881554 /* NotoSansArabic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4813DA7336EE412184B3C1D2 /* NotoSansArabic-Medium.ttf */; };
+		FF31BB74B01443A981D3CF69 /* NotoSansArabic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28CC723FCD2A462C954462A7 /* NotoSansArabic-Regular.ttf */; };
+		8521AAA473FE45519C083A5E /* NotoSansArabic-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CEBE181023348E8A213FE77 /* NotoSansArabic-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		C25B8A1152434683B9E3BC1E /* background-landing.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "background-landing.png"; path = "../../../packages/elements/src/assets/images/background-landing.png"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-app/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		8BC82E42D0CB49CE93E4755E /* NotoSansArabic-Bold.ttf */ = {isa = PBXFileReference; name = "NotoSansArabic-Bold.ttf"; path = "../../../packages/elements/src/assets/fonts/NotoSansArabic-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4813DA7336EE412184B3C1D2 /* NotoSansArabic-Medium.ttf */ = {isa = PBXFileReference; name = "NotoSansArabic-Medium.ttf"; path = "../../../packages/elements/src/assets/fonts/NotoSansArabic-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		28CC723FCD2A462C954462A7 /* NotoSansArabic-Regular.ttf */ = {isa = PBXFileReference; name = "NotoSansArabic-Regular.ttf"; path = "../../../packages/elements/src/assets/fonts/NotoSansArabic-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0CEBE181023348E8A213FE77 /* NotoSansArabic-SemiBold.ttf */ = {isa = PBXFileReference; name = "NotoSansArabic-SemiBold.ttf"; path = "../../../packages/elements/src/assets/fonts/NotoSansArabic-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,10 @@
 				607C95843A0C480FA007C32C /* Poppins-Regular.otf */,
 				A3E2133F10D848028DCA9BCF /* Poppins-SemiBold.otf */,
 				C25B8A1152434683B9E3BC1E /* background-landing.png */,
+				8BC82E42D0CB49CE93E4755E /* NotoSansArabic-Bold.ttf */,
+				4813DA7336EE412184B3C1D2 /* NotoSansArabic-Medium.ttf */,
+				28CC723FCD2A462C954462A7 /* NotoSansArabic-Regular.ttf */,
+				0CEBE181023348E8A213FE77 /* NotoSansArabic-SemiBold.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -225,6 +237,10 @@
 				1DD2A15CE3114B0EAD764C83 /* Poppins-Regular.otf in Resources */,
 				EC2D523745D54C4DBD90F5E5 /* Poppins-SemiBold.otf in Resources */,
 				0FB687999B664F78B50624E4 /* background-landing.png in Resources */,
+				5EF275AC447A4A6CBB0ABB19 /* NotoSansArabic-Bold.ttf in Resources */,
+				C26FF8EBB7BE4A1F87881554 /* NotoSansArabic-Medium.ttf in Resources */,
+				FF31BB74B01443A981D3CF69 /* NotoSansArabic-Regular.ttf in Resources */,
+				8521AAA473FE45519C083A5E /* NotoSansArabic-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

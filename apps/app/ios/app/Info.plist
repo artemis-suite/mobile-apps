@@ -55,6 +55,10 @@
 		<string>Poppins-Medium.otf</string>
 		<string>Poppins-Regular.otf</string>
 		<string>Poppins-SemiBold.otf</string>
+		<string>NotoSansArabic-Bold.ttf</string>
+		<string>NotoSansArabic-Medium.ttf</string>
+		<string>NotoSansArabic-Regular.ttf</string>
+		<string>NotoSansArabic-SemiBold.ttf</string>
 	</array>
 </dict>
 </plist>

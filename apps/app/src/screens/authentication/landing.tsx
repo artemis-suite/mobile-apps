@@ -12,6 +12,6 @@ export default function LandingScreen({ }: ScreenProps) {
         <Box height={50} />
         <Text variant="h1">القي الشبكة</Text>
         <Box height={70} />
-        <Button variant="primary" size="large" label="ابدا" />
+        <Button variant="primary" size="large" label="ابدأ" />
     </Screen>
 }

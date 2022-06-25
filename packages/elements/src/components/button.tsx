@@ -59,15 +59,16 @@ const variantMap = {
 }
 
 export interface ButtonProps {
-    variant: ButtonVariant
-    size: ButtonSize,
+    variant?: ButtonVariant
+    size?: ButtonSize,
     icon?: string,
     label?: string,
+    labelSpacing?: number,
     onPress?: TouchableOpacityProps["onPress"],
-    onLongPress?: TouchableOpacityProps["onLongPress"]
+    onLongPress?: TouchableOpacityProps["onLongPress"],
 }
 
-export function Button({ variant, size, icon, label = "", ...rest }: ButtonProps) {
+export function Button({ variant = "primary", size = "small", icon, label = "", labelSpacing = 1, ...rest }: ButtonProps) {
     return (<TouchableOpacity
         height={54}
         {...variantMap.size[size]}
@@ -76,6 +77,10 @@ export function Button({ variant, size, icon, label = "", ...rest }: ButtonProps
         {...rest}
     >
         <Text
+            letterSpacing={labelSpacing}
+            borderColor="dark"
+            borderWidth={1}
+            paddingTop="s"
             {...variantMap.text.base}
             {...variantMap.text[variant]}
         >{label}</Text>

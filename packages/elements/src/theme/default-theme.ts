@@ -55,7 +55,7 @@ const theme = createTheme({
             fontSize: 34,
             fontWeight: "700",
             fontStyle: "normal",
-            lineHeight: 36,
+            lineHeight: 54,
         },
         h2: {
             fontFamily: "NotoSansArabic-Bold", //"Poppins-Bold",
@@ -81,7 +81,7 @@ const theme = createTheme({
         p1b: {
             fontFamily: "NotoSansArabic-SemiBold", //"Poppins-SemiBold",
             fontSize: 16,
-            fontWeight: "600",
+            fontWeight: "700",
             fontStyle: "normal",
             lineHeight: 21,
         },
@@ -137,5 +137,5 @@ const theme = createTheme({
     }
 });
 
-export type ThemeType = typeof theme;
+export type Theme = typeof theme;
 export { theme };
