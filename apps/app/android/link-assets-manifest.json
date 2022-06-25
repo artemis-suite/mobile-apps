@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "../../packages/elements/src/assets/fonts/Poppins-Bold.otf",
+      "sha1": "84cb75afcc8ae2bf34d0c728764fe4e8581bbc55"
+    },
+    {
+      "path": "../../packages/elements/src/assets/fonts/Poppins-Medium.otf",
+      "sha1": "cadcdaeff2150d193bcb35c29bdea82047c2c9ae"
+    },
+    {
+      "path": "../../packages/elements/src/assets/fonts/Poppins-Regular.otf",
+      "sha1": "2f0a28e7d9bafe70bb3a5ea44bd8973c7ac32d32"
+    },
+    {
+      "path": "../../packages/elements/src/assets/fonts/Poppins-SemiBold.otf",
+      "sha1": "8246e0cba232755de1d032fcfdc2d637eca37ac8"
+    },
+    {
+      "path": "../../packages/elements/src/assets/images/background-landing.png",
+      "sha1": "bc09de240d8f197a8b3625dcd5e14994a9e41aca"
+    }
+  ]
+}
