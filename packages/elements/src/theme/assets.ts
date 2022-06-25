@@ -4,3 +4,7 @@ export const fonts = {
 	"Poppins-Regular": require("../assets/fonts/Poppins-Regular.otf"),
 	"Poppins-SemiBold": require("../assets/fonts/Poppins-SemiBold.otf"),
 };
+
+export const images = {
+	"background-landing": require("../assets/images/background-landing.png")
+}
