@@ -8,6 +8,7 @@ import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 //#region [ Root Stack ]
 
 export type RootStackParamList = {
+    Splash: undefined,
     Landing: undefined,
     LoginPhoneNumber: undefined,
     LoginVerification: undefined,

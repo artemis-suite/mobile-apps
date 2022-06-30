@@ -1,4 +1,10 @@
 {
-	"compilerOptions": {},
+	"compilerOptions": {
+		"paths": {
+			"app/*": ["./src/app/*"],
+			"common/*": ["./src/common/*"],
+			"auth/*": ["./src/features/authentication/*"]
+		}
+	},
 	"extends": "../../tsconfig.json"
 }
