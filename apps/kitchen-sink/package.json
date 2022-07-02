@@ -31,6 +31,7 @@
     "@storybook/addon-ondevice-knobs": "^5.3.25",
     "@storybook/react-native": "^5.3.25",
     "@storybook/react-native-server": "^5.3.23",
+    "@storybook/addon-contexts": "^5.3",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.66.13",
     "@types/storybook__react": "^5.2.1",

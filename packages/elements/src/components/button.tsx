@@ -78,9 +78,6 @@ export function Button({ variant = "primary", size = "small", icon, label = "", 
     >
         <Text
             letterSpacing={labelSpacing}
-            borderColor="dark"
-            borderWidth={1}
-            paddingTop="s"
             {...variantMap.text.base}
             {...variantMap.text[variant]}
         >{label}</Text>

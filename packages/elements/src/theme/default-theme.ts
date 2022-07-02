@@ -9,7 +9,7 @@ const theme = createTheme({
         "primary/500": "#4E74F9",
         "prinary/600": "#083CF0",
 
-        "gary/100": "#F4F4F8",
+        "gray/100": "#F4F4F8",
         "gray/200": "#E9E9F1",
         "gray/300": "#CCCCD6",
         "gray/400": "#A3A3AE",
@@ -44,98 +44,189 @@ const theme = createTheme({
     },
     textVariants: {
         defaults: {
-            fontFamily: "NotoSansArabic-Regular", //"Poppins-Regular",
             fontSize: 16,
             fontWeight: "400",
             fontStyle: "normal",
-            lineHeight: 18,
         },
         h1: {
-            fontFamily: "NotoSansArabic-Bold", //"Poppins-Bold",
             fontSize: 34,
             fontWeight: "700",
             fontStyle: "normal",
-            lineHeight: 54,
         },
         h2: {
-            fontFamily: "NotoSansArabic-Bold", //"Poppins-Bold",
             fontSize: 32,
             fontWeight: "700",
             fontStyle: "normal",
-            lineHeight: 36,
         },
         h3: {
-            fontFamily: "NotoSansArabic-Bold", //"Poppins-Bold",
             fontSize: 24,
             fontWeight: "700",
             fontStyle: "normal",
-            lineHeight: 26
         },
         h4: {
-            fontFamily: "NotoSansArabic-SemiBold", //"Poppins-SemiBold",
             fontSize: 20,
             fontWeight: "600",
             fontStyle: "normal",
-            lineHeight: 22
         },
         p1b: {
-            fontFamily: "NotoSansArabic-SemiBold", //"Poppins-SemiBold",
             fontSize: 16,
             fontWeight: "700",
             fontStyle: "normal",
-            lineHeight: 21,
         },
         p1: {
-            fontFamily: "NotoSansArabic-Regular",//"Poppins-Regular",
             fontSize: 16,
             fontWeight: "400",
             fontStyle: "normal",
-            lineHeight: 18,
         },
         p2b: {
-            fontFamily: "NotoSansArabic-Medium", //"Poppins-Medium",
             fontSize: 14,
             fontWeight: "500",
             fontStyle: "normal",
-            lineHeight: 18,
         },
         p2: {
-            fontFamily: "NotoSansArabic-Regular", //"Poppins-Regular",
             fontSize: 14,
             fontWeight: "400",
-            fontStyle: "normal",
-            lineHeight: 16,
+            fontStyle: "normal"
         },
         p3b: {
-            fontFamily: "NotoSansArabic-Medium", //"Poppins-Medium",
             fontSize: 12,
             fontWeight: "500",
             fontStyle: "normal",
-            lineHeight: 16
         },
         p3: {
-            fontFamily: "NotoSansArabic-Regular", //"Poppins-Regular",
             fontSize: 12,
             fontWeight: "400",
             fontStyle: "normal",
-            lineHeight: 16
         },
         p4: {
-            fontFamily: "NotoSansArabic-Regular", //"Poppins-Regular",
             fontSize: 10,
             fontWeight: "400",
-            fontStyle: "normal",
-            lineHeight: 13
+            fontStyle: "normal"
         },
         p5: {
-            fontFamily: "NotoSansArabic-Regular", //"Poppins-Regular",
             fontSize: 8,
             fontWeight: "400",
             fontStyle: "normal",
-            lineHeight: 10
         }
     }
 });
 
+
+const LTRTheme = {
+    ...theme,
+    textVariants: {
+        defaults: {
+            ...theme.textVariants.defaults,
+            fontFamily: "Poppins-Regular",
+        },
+        h1: {
+            ...theme.textVariants.h1,
+            fontFamily: "Poppins-Bold",
+        },
+        h2: {
+            ...theme.textVariants.h2,
+            fontFamily: "Poppins-Bold",
+        },
+        h3: {
+            ...theme.textVariants.h3,
+            fontFamily: "Poppins-Bold",
+        },
+        h4: {
+            ...theme.textVariants.h4,
+            fontFamily: "Poppins-SemiBold",
+        },
+        p1b: {
+            ...theme.textVariants.p1b,
+            fontFamily: "Poppins-SemiBold",
+        },
+        p1: {
+            ...theme.textVariants.p1,
+            fontFamily: "Poppins-Regular",
+        },
+        p2b: {
+            ...theme.textVariants.p2b,
+            fontFamily: "Poppins-Medium",
+        },
+        p2: {
+            ...theme.textVariants.p2,
+            fontFamily: "Poppins-Regular",
+        },
+        p3b: {
+            ...theme.textVariants.p3b,
+            fontFamily: "Poppins-Medium",
+        },
+        p3: {
+            ...theme.textVariants.p3,
+            fontFamily: "Poppins-Regular",
+        },
+        p4: {
+            ...theme.textVariants.p4,
+            fontFamily: "Poppins-Regular",
+        },
+        p5: {
+            ...theme.textVariants.p5,
+            fontFamily: "Poppins-Regular",
+        }
+    }
+}
+
+const RTLTheme = {
+    ...theme,
+    textVariants: {
+        defaults: {
+            ...theme.textVariants.defaults,
+            fontFamily: "NotoSansArabic-Regular",
+        },
+        h1: {
+            ...theme.textVariants.h1,
+            fontFamily: "NotoSansArabic-Bold",
+        },
+        h2: {
+            ...theme.textVariants.h2,
+            fontFamily: "NotoSansArabic-Bold",
+        },
+        h3: {
+            ...theme.textVariants.h3,
+            fontFamily: "NotoSansArabic-Bold",
+        },
+        h4: {
+            ...theme.textVariants.h4,
+            fontFamily: "NotoSansArabic-SemiBold",
+        },
+        p1b: {
+            ...theme.textVariants.p1b,
+            fontFamily: "NotoSansArabic-SemiBold",
+        },
+        p1: {
+            ...theme.textVariants.p1,
+            fontFamily: "NotoSansArabic-Regular",
+        },
+        p2b: {
+            ...theme.textVariants.p2b,
+            fontFamily: "NotoSansArabic-Medium",
+        },
+        p2: {
+            ...theme.textVariants.p2,
+            fontFamily: "NotoSansArabic-Regular",
+        },
+        p3b: {
+            ...theme.textVariants.p3b,
+            fontFamily: "NotoSansArabic-Medium",
+        },
+        p3: {
+            ...theme.textVariants.p3,
+            fontFamily: "NotoSansArabic-Regular"
+        },
+        p4: {
+            ...theme.textVariants.p4,
+            fontFamily: "NotoSansArabic-Regular"
+        },
+        p5: {
+            ...theme.textVariants.p5,
+            fontFamily: "NotoSansArabic-Regular"
+        }
+    }
+}
+
 export type Theme = typeof theme;
-export { theme };
+export { LTRTheme, RTLTheme };
