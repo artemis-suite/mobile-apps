@@ -1,5 +1,5 @@
 import * as Image from "./components/image";
-
+import * as Input from "./components/input";
 
 export { ThemeProvider } from "@shopify/restyle";
 export * from "./theme/assets";
@@ -10,5 +10,7 @@ export * from "./components/box";
 export * from "./components/text";
 export * from "./components/button";
 export * from "./components/screen";
+export * from "./components/activity-indicator";
+export * from "./components/icon";
 
-export { Image };
+export { Image, Input };

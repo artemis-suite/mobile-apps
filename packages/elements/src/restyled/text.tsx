@@ -1,7 +1,27 @@
-import { Text as RNText } from "react-native";
-import { createText, TextProps as RNTextProps } from "@shopify/restyle";
+import { Text as RNText, TextProps as RNTextProps } from "react-native";
+import {
+    createRestyleComponent, textRestyleFunctions,
+    PositionProps, position,
+    LayoutProps, layout,
+    TextProps as SRTextProps
+} from "@shopify/restyle";
 
-import { ThemeType } from "../theme/default-theme";
+import { Theme } from "../theme/default-theme";
 
-export type TextProps = RNTextProps<ThemeType>;
-export const Text = createText<ThemeType>(RNText);
+//export type TextProps = RNTextProps<Theme>;
+//export const Text = createText<Theme>(RNText);
+
+export type TextProps =
+    RNTextProps &
+    SRTextProps<Theme> &
+    PositionProps<Theme> &
+    LayoutProps<Theme>
+    & {
+        children?: React.ReactNode
+    }
+export const Text = createRestyleComponent<TextProps, Theme>(
+    [...textRestyleFunctions, position, layout],
+    (props) => <RNText {...props} />
+)
+
+export default Text;

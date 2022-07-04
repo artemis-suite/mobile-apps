@@ -11,20 +11,20 @@ import {
 } from "@shopify/restyle";
 import { Image as RNImage, ImageProps as RNImageProps } from "react-native";
 
-import { ThemeType } from "../theme/default-theme";
+import type { Theme } from "../theme/default-theme";
 
 export type ImageProps = {
 
 } & RNImageProps
-    & BackgroundColorProps<ThemeType>
-    & OpacityProps<ThemeType>
-    & VisibleProps<ThemeType>
-    & LayoutProps<ThemeType>
-    & SpacingProps<ThemeType>
-    & BorderProps<ThemeType>
-    & ShadowProps<ThemeType>
-    & PositionProps<ThemeType>;
+    & BackgroundColorProps<Theme>
+    & OpacityProps<Theme>
+    & VisibleProps<Theme>
+    & LayoutProps<Theme>
+    & SpacingProps<Theme>
+    & BorderProps<Theme>
+    & ShadowProps<Theme>
+    & PositionProps<Theme>;
 
-export const Image = createRestyleComponent<ImageProps, ThemeType>([
+export const Image = createRestyleComponent<ImageProps, Theme>([
     backgroundColor, border, opacity, visible, layout, spacing, shadow, position
 ], RNImage);

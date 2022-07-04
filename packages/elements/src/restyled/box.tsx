@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import { createBox, BoxProps as RNBoxPors } from "@shopify/restyle";
 
-import { ThemeType } from "../theme/default-theme";
+import type { Theme } from "../theme/default-theme";
 
-export type BoxProps = RNBoxPors<ThemeType>;
-export const Box = createBox<ThemeType>(View);
+export type BoxProps = RNBoxPors<Theme>;
+export const Box = createBox<Theme>(View);
