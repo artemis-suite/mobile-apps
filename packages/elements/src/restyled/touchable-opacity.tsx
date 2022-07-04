@@ -4,4 +4,4 @@ import { createBox, BoxProps } from "@shopify/restyle";
 import { Theme } from "../theme/default-theme";
 
 export type TouchableOpacityProps = BoxProps<Theme> & RNTouchableOpacityProps
-export const TouchableOpacity = createBox<Theme>(RNTouchableOpacity);
+export const TouchableOpacity = createBox<Theme, TouchableOpacityProps>(RNTouchableOpacity);

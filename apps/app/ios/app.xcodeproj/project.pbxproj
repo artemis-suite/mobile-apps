@@ -13,6 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1DD2A15CE3114B0EAD764C83 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 607C95843A0C480FA007C32C /* Poppins-Regular.otf */; };
 		23952595A5034C779009B0A8 /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA9728EBCDF432EA3DB1569 /* Poppins-Bold.otf */; };
+		319F9E6834F14C998DB4616D /* background-login.png in Resources */ = {isa = PBXBuildFile; fileRef = 8774A7AEFEDC4243BBC16F4B /* background-login.png */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		5642506508CA403CA19A312B /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A66317E052A4D189CC5D37B /* Poppins-Medium.otf */; };
 		5EF275AC447A4A6CBB0ABB19 /* NotoSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BC82E42D0CB49CE93E4755E /* NotoSansArabic-Bold.ttf */; };
@@ -41,6 +42,7 @@
 		607C95843A0C480FA007C32C /* Poppins-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.otf"; path = "../../../packages/elements/src/assets/fonts/Poppins-Regular.otf"; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.debug.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.debug.xcconfig"; sourceTree = "<group>"; };
 		7A4D352CD337FB3A3BF06240 /* Pods-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.release.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.release.xcconfig"; sourceTree = "<group>"; };
+		8774A7AEFEDC4243BBC16F4B /* background-login.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "background-login.png"; path = "../../../packages/elements/src/assets/images/background-login.png"; sourceTree = "<group>"; };
 		8BC82E42D0CB49CE93E4755E /* NotoSansArabic-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansArabic-Bold.ttf"; path = "../../../packages/elements/src/assets/fonts/NotoSansArabic-Bold.ttf"; sourceTree = "<group>"; };
 		9A66317E052A4D189CC5D37B /* Poppins-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.otf"; path = "../../../packages/elements/src/assets/fonts/Poppins-Medium.otf"; sourceTree = "<group>"; };
 		A3E2133F10D848028DCA9BCF /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.otf"; path = "../../../packages/elements/src/assets/fonts/Poppins-SemiBold.otf"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				4813DA7336EE412184B3C1D2 /* NotoSansArabic-Medium.ttf */,
 				28CC723FCD2A462C954462A7 /* NotoSansArabic-Regular.ttf */,
 				0CEBE181023348E8A213FE77 /* NotoSansArabic-SemiBold.ttf */,
+				8774A7AEFEDC4243BBC16F4B /* background-login.png */,
 			);
 			name = Resources;
 			path = "";
@@ -241,6 +244,7 @@
 				C26FF8EBB7BE4A1F87881554 /* NotoSansArabic-Medium.ttf in Resources */,
 				FF31BB74B01443A981D3CF69 /* NotoSansArabic-Regular.ttf in Resources */,
 				8521AAA473FE45519C083A5E /* NotoSansArabic-SemiBold.ttf in Resources */,
+				319F9E6834F14C998DB4616D /* background-login.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

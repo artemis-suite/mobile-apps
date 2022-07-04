@@ -16,6 +16,27 @@ const theme = createTheme({
         "gray/500": "#6F6F79",
         "gray/600": "#515168",
 
+        "error/100": "#FFF5F5",
+        "error/200": "#FED7D7",
+        "error/300": "#FEB2B2",
+        "error/400": "#F56565",
+        "error/500": "#E53E3E",
+        "error/600": "#C53030",
+
+        "warning/100": "#FFFFF0",
+        "warning/200": "#FEFCBF",
+        "warning/300": "#FAF089",
+        "warning/400": "#ECC94B",
+        "warning/500": "#D69E2E",
+        "warning/600": "#B7791F",
+
+        "success/100": "#F0FFF4",
+        "success/200": "#C6F6D5",
+        "success/300": "#9AE6B4",
+        "success/400": "#48BB78",
+        "success/500": "#38A169",
+        "success/600": "#2F855A",
+
         light: "#fff",
         dark: "#161C2B",
         background: "#FAFAFA",

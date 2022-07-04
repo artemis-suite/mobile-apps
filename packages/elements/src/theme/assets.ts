@@ -13,5 +13,6 @@ export const fonts = {
 };
 
 export const images = {
-	"background-landing": require("../assets/images/background-landing.png")
+	"background-landing": require("../assets/images/background-landing.png"),
+	"background-login": require("../assets/images/background-login.png")
 }

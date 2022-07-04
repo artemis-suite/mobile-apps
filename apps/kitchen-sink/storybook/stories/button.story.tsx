@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
-import { Button, Text, Box } from "@artemis-mobile/elements";
+import { Button, Box } from "@artemis-mobile/elements";
 
 import { storiesOf } from '@storybook/react-native';
 

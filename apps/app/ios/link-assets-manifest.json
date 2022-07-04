@@ -36,6 +36,10 @@
     {
       "path": "../../packages/elements/src/assets/images/background-landing.png",
       "sha1": "bc09de240d8f197a8b3625dcd5e14994a9e41aca"
+    },
+    {
+      "path": "../../packages/elements/src/assets/images/background-login.png",
+      "sha1": "c2f3a22ee83434f13d1141f745b241253b70b4f6"
     }
   ]
 }

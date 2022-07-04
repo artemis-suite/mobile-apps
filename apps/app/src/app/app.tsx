@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native"
-import { ThemeProvider, theme } from "@artemis-mobile/elements";
+import { ThemeProvider, RTLTheme as theme } from "@artemis-mobile/elements";
 
 import { RootStackScreen } from "./navigation";
 import { ReduxStoreProvider } from "./store";
