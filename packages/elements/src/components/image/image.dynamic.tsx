@@ -1,4 +1,4 @@
-import { ImageProps, Image } from "../../restyled/image";
+import { ImageProps, Image } from "../../basic/image";
 
 
 export type DynamicImageProps = {

@@ -1,44 +1,50 @@
+import { useEffect } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HeaderBackButton } from "@react-navigation/elements";
 
 import { Text, Icon } from "@artemis-mobile/elements";
 
+import { tabsScreen } from "./tabs";
 import SplashScreen from 'auth/screens/splash';
 import LandingScreen from "auth/screens/landing";
-import LoginPhoneNumber from "auth/screens/login-phone-number";
-import { useAuthSelector } from 'auth/slice';
+import LoginPhoneNumberScreen from "auth/screens/login-phone-number";
+import VerifyPhoneNumberScreen from "auth/screens/verify-phone-number";
+
+import { useAuthAction, useAuthSelector } from 'auth/slice';
 import { RootStackParamList } from "./types";
 
 const rootStack = createNativeStackNavigator<RootStackParamList>();
 
 const RootStackScreen = () => {
-    const isLoggedIn = useAuthSelector("selectIsLoggedIn");
+    const isAuthenticated = useAuthSelector("selectIsAuthenticated");
     const IsInitialized = useAuthSelector("selectIsInitialized");
-    return <rootStack.Navigator screenOptions={
-        {
-            headerShadowVisible: false,
+    const listenToLoginChange = useAuthAction("listenToLoginChange");
 
-        }}>
+    useEffect(() => {
+        listenToLoginChange();
+    }, []);
+
+    return <rootStack.Navigator screenOptions={{ headerShadowVisible: false }}>
         {
             IsInitialized === false
                 ? <rootStack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false, animation: "none" }} />
-                : isLoggedIn
-                    ? <rootStack.Screen name="Main" component={() => { return null; }} />
+                : isAuthenticated
+                    ? <rootStack.Screen name="Main" component={tabsScreen} options={{ headerShown: false }} />
                     : <>
                         <rootStack.Screen name="Landing" component={LandingScreen} options={{ headerShown: false, animation: "fade" }} />
-                        <rootStack.Screen name="LoginPhoneNumber" component={LoginPhoneNumber}
-                            options={({ navigation }) => {
-                                return {
-                                    headerTitle: () =>
-                                        <Text variant="h4">تسجيل دخول</Text>,
-                                    headerLeft: ({ canGoBack }) =>
-                                        <HeaderBackButton
-                                            onPress={() => { canGoBack && navigation.goBack() }}
-                                            backImage={() => <Icon name="fa-arrow-left" size="l" />} />
-                                }
+                        <rootStack.Group screenOptions={({ navigation }) => {
+                            return {
+                                headerTitle: ({ children }) =>
+                                    <Text variant="h4">{children}</Text>,
+                                headerLeft: ({ canGoBack }) =>
+                                    <HeaderBackButton
+                                        onPress={() => { canGoBack && navigation.goBack() }}
+                                        backImage={() => <Icon name="fa-arrow-left" size="l" />} />
                             }
-                            } />
-                        {/* <rootStack.Screen name="LoginVerification" component={() => null} /> */}
+                        }}>
+                            <rootStack.Screen name="LoginPhoneNumber" component={LoginPhoneNumberScreen} options={{ title: "تسجيل دخول" }} />
+                            <rootStack.Screen name="LoginVerification" component={VerifyPhoneNumberScreen} options={{ title: "تسجيل دخول" }} />
+                        </rootStack.Group>
                     </>
 
         }
