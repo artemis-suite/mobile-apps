@@ -1,1 +1,1 @@
-export * from "../restyled/text";
+export * from "../basic/text";

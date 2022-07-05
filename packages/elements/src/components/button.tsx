@@ -1,5 +1,5 @@
-import { TouchableOpacity, TouchableOpacityProps } from "../restyled/touchable-opacity";
-import { Text, TextProps } from "../restyled/text";
+import { TouchableOpacity, TouchableOpacityProps } from "../basic/touchable-opacity";
+import { Text, TextProps } from "../basic/text";
 
 type ButtonVariant = "primary" | "outlined" | "disabled" | "noBorder";
 type ButtonSize = "large" | "small";

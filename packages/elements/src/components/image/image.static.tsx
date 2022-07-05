@@ -1,5 +1,5 @@
 import { images } from "../../theme/assets";
-import { ImageProps, Image } from "../../restyled/image";
+import { ImageProps, Image } from "../../basic/image";
 
 export type StaticImageProps = {
     source: keyof typeof images

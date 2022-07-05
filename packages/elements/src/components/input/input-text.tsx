@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { TextInput } from "../../restyled/text-input";
-import { Box } from "../../restyled/box";
-import { Text } from "../../restyled/text";
+import { TextInput } from "../../basic/text-input";
+import { Box } from "../../basic/box";
+import { Text } from "../../basic/text";
 import { Icon, IconProps } from "../icon";
 import { Theme } from "../../theme/default-theme";
 

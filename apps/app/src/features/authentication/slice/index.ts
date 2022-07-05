@@ -1,22 +1,26 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { useSelector as useReduxSelector, useDispatch as useReduxDispatch } from 'react-redux';
+/*
+in this file we need to export 
+    1- hook that accepts the selector names 
+    2- hook that accepts action | thunk name and dispatch it
+    3- combine reducers to be used in creating the store (export as default cuz it is not used anywhere else)
+    4- state type to be used in components / global selectors
+*/
 
-import { initialState } from "./state";
+import {
+    useSelector as useReduxSelector,
+    useDispatch as useReduxDispatch
+} from 'react-redux';
+
 import * as localSelectors from "./selectors";
-import { reducers, extraReducers } from "./reducers";
+import * as thunk from "./thunk";
+import { reducer, actions } from "./slice";
 
-const slice = createSlice({
-    name: "auth",
-    initialState,
-    reducers,
-    extraReducers
-});
+type dispatchActions = keyof typeof actions;
+type dispatchThunk = keyof typeof thunk;
+type Dispatchables = dispatchActions | dispatchThunk;
 
 // State 
-export { AuthState } from "./state";
-
-// reducer
-export const authReducer = slice.reducer;
+export type { AuthState } from "./state";
 
 // selectors
 export function useAuthSelector<
@@ -33,12 +37,21 @@ export function useAuthSelector<
 
 // actions
 export function useAuthAction<
-    TKey extends keyof typeof slice.actions,
-    TParams extends Parameters<typeof slice.actions[TKey]>
->(key: TKey): (args?: TParams) => ReturnType<typeof slice.actions[TKey]> {
+    TKey extends Dispatchables,
+    TParams = TKey extends dispatchThunk
+    ? Parameters<typeof thunk[TKey]>
+    : TKey extends dispatchActions ? Parameters<typeof actions[TKey]> : never,
+    TReturn = TKey extends dispatchThunk
+    ? ReturnType<ReturnType<typeof thunk[TKey]>>
+    : TKey extends dispatchActions ? ReturnType<ReturnType<typeof actions[TKey]>> : never
+>(key: TKey): (args?: TParams) => TReturn {
     const dispatch = useReduxDispatch();
     return (args?: TParams) => {
-        const action = slice.actions[key] as Function
-        return dispatch(action.apply(this, ...(args ?? [])))
+        const action = (actions[key] || thunk[key]) as Function
+        return dispatch(
+            action.apply(this, (args ?? []))
+        )
     }
 }
+// reducer
+export default reducer;

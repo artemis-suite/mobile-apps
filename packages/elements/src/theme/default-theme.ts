@@ -43,6 +43,7 @@ const theme = createTheme({
         transparent: "transparent"
     },
     spacing: {
+        xs: 4,
         s: 8,
         m: 16,
         l: 24,
@@ -57,6 +58,7 @@ const theme = createTheme({
         tablet: 768
     },
     borderRadii: {
+        s: 6,
         m: 12
     },
     zIndices: {

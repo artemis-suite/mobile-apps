@@ -1,12 +1,10 @@
+import { FirebaseAuthTypes } from "@react-native-firebase/auth";
+
 export const initialState = {
-    token: null as {
-        access_token: string,
-        refresh_token: string,
-    },
-    loading: false,
-    loaded: false,
-    isLoggedIn: false,
+    phoneNumber: null as string,
     error: null as string,
+    profile: null as FirebaseAuthTypes.ConfirmationResult,
+    isAuthenticated: false,
     isInitilized: false
 }
 
