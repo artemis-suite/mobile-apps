@@ -15,4 +15,8 @@ config.resolver.nodeModulesPaths = [
 	path.resolve(workspaceRoot, "node_modules"),
 ];
 
+config.transformer = {
+	assetPlugins: ["expo-asset/tools/hashAssetFiles"],
+};
+
 module.exports = config;
