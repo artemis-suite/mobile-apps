@@ -1,7 +1,7 @@
 {
   "name": "@artemis-mobile/app",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "start": "expo start --dev-client",
     "android": "expo run:android",

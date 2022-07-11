@@ -1,0 +1,93 @@
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "update plists"
+  lane :update_plists do
+    update_plist( 
+      plist_path: "GoogleService-Info.plist",
+      block: proc do |plist|
+          plist[:CLIENT_ID] = ENV["FIREBASE_IOS_CLIENT_ID"]
+          plist[:REVERSED_CLIENT_ID] = ["FIREBASE_IOS_REVERSED_CLIENT_ID"]
+          plist[:API_KEY] = ENV["FIREBASE_IOS_API_KEY"]
+          plist[:GCM_SENDER_ID] = ENV["FIREBASE_IOS_GCM_SENDER_ID"]
+          plist[:PROJECT_ID] = ENV["FIREBASE_IOS_PROJECT_ID"]
+          plist[:STORAGE_BUCKET] = ENV["FIREBASE_IOS_STORAGE_BUCKET"]
+          plist[:GOOGLE_APP_ID] = ENV["FIREBASE_IOS_GOOGLE_APP_ID"]
+        end
+    )
+    update_plist( 
+      plist_path: "app/Supporting/Expo.plist",
+      block: proc do |plist|
+          plist[:EXUpdatesURL] = ENV["OTA_URL"]
+        end
+    )
+  end 
+  
+  desc "run build with its configurations"
+  lane :build do |options|
+    profile = lane_context[SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING][CredentialsManager::AppfileConfig.try_fetch_value(:app_identifier)]
+    build_app(
+      scheme: "app",
+      clean: true,
+      configuration: "Release",
+      export_method: options[:export_method],
+      export_options: {
+        provisioningProfiles: lane_context[SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING]
+      },
+      xcargs:"PROVISIONING_PROFILE_SPECIFIER='#{profile}'"
+    )
+  end 
+
+  desc "build an alpha release with dev certificates, suitable for distributing in firebase app distribution only"
+  lane :alpha do |options|
+    setup_ci
+    sync_code_signing({type: "adhoc",readonly: true})
+    update_plists
+    increment_version_number(bump_type:options.fetch(:build_type,"minor"))
+    increment_build_number(build_number:1)
+    build(export_method: "ad-hoc")
+    firebase_app_distribution(
+      app: ENV["FIREBASE_IOS_CLIENT_ID"],
+      firebase_cli_token: ENV["FIREBASE_CITOKEN"],
+      groups: "internal-testers"
+    )
+  end
+
+  desc "build a beta release with prod certificats, suitable for distributing in test flight"
+  lane :beta do 
+    setup_ci
+    app_store_connect_api_key(
+      key_id: ENV["APPSTORE_KEY_ID"],
+      issuer_id: ENV["APPSTORE_ISSUER_ID"],
+      key_content: ENV["APPSTORE_KEY_CONTENT"]
+    )
+    sync_code_signing({type: "appstore",readonly: true})
+    update_plists
+    increment_build_number
+    build(export_method: "app-store")
+    upload_to_testflight
+  end 
+
+  desc "build a prod release with prod certificats, suitable for distributing in app store"
+  lane :prod do 
+    setup_ci
+    app_store_connect_api_key(
+      key_id: ENV["APPSTORE_KEY_ID"],
+      issuer_id: ENV["APPSTORE_ISSUER_ID"],
+      key_content: ENV["APPSTORE_KEY_CONTENT"]
+    )
+    sync_code_signing({type: "appstore",readonly: true})
+    update_plists
+    increment_build_number
+    build(export_method: "app-store")
+    upload_to_app_store
+  end
+
+end
+
+#key id: 5MM39Q9G2X
+#isser id: 4eb246c1-f380-4fa3-9cc6-4e2b851209c9
+#key file: ~/downloads/AuthKey_5MM39Q9G2X.p8

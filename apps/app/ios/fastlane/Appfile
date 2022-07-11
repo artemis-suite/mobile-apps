@@ -1,0 +1,9 @@
+app_identifier("org.artemis-suite.app") # The bundle identifier of your app
+apple_id("minawalphonce.app@gmail.com") # Your Apple email address
+
+itc_team_id("123925300") # App Store Connect Team ID
+team_id("SABR8F4R38") # Developer Portal Team ID
+
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
