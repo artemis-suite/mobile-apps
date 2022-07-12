@@ -2,6 +2,7 @@
     "react-native": {},
     "hosting": {
         "public": "dist",
+        "target": "aot",
         "headers": [
             {
                 "source": "**/*.js",
