@@ -9,7 +9,8 @@
     "ios:pod": "npx pod-install",
     "ios:clean": "cd ios && xcodebuild -workspace app.xcworkspace -scheme app clean && cd ../",
     "assets": "react-native-asset",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "ota": "firebase deploy"
   },
   "dependencies": {
     "@artemis-mobile/elements": "1.0.0",

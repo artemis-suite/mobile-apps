@@ -41,8 +41,8 @@ platform :ios do
     )
   end 
 
-  desc "build an alpha release with dev certificates, suitable for distributing in firebase app distribution only"
-  lane :alpha do |options|
+  desc "build an dev release with dev certificates, suitable for distributing in firebase app distribution only"
+  lane :dev do |options|
     setup_ci
     sync_code_signing({type: "adhoc",readonly: true})
     update_plists

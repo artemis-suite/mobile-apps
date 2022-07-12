@@ -1,20 +1,21 @@
-name: update-alpha
+name: update-dev
 on: push
 #     branches:
 #       - develop
 jobs:
-  build:
+  Build And Deploy:
     runs-on: macos-latest
+    environment: dev
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: "14"
-      - name: where am I ?
-        run: ls
+          node-version: "14.18.0"
       - name: install deps
         run: yarn install
       - name: export
-        run: yarn app expo export --public-url "$OTA_URL"
+        run: yarn app expo export --public-url "$OTA_URL" --non-interactive
+      - name: where am I ?
+        run: ls
       - name: publish
-        run: yarn app firebase deploy
+        run: yarn app ota
