@@ -3,7 +3,7 @@ on: push
 #     branches:
 #       - develop
 jobs:
-  Build And Deploy:
+  build-and-deploy:
     runs-on: macos-latest
     environment: dev
     steps:
