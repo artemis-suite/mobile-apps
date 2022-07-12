@@ -9,6 +9,6 @@
 | FIREBASE_IOS_PROJECT_ID         | GoogleService-Info | GoogleService-Info |
 | FIREBASE_IOS_STORAGE_BUCKET     | GoogleService-Info | GoogleService-Info |
 | FIREBASE_IOS_GOOGLE_APP_ID      | GoogleService-Info | GoogleService-Info |
-| FIREBASE_CITOKEN                | Firebase CLI       |
+| FIREBASE_TOKEN                  | Firebase CLI       |
 | __OTA__                         |
 | OTA_URL                         |                    |
