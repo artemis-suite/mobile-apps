@@ -1,7 +1,7 @@
 name: update-dev
 on: push
-#     branches:
-#       - develop
+    branches:
+      - develop
 jobs:
   build-and-deploy:
     runs-on: macos-latest
@@ -18,7 +18,5 @@ jobs:
         run: yarn install
       - name: export
         run: yarn app expo export --public-url "$OTA_URL" --non-interactive
-      - name: where am I ?
-        run: ls
       - name: publish
         run: yarn app ota
