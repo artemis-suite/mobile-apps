@@ -14,6 +14,8 @@ jobs:
           node-version: "14.18.0"
       - name: install deps
         run: yarn install
+      - name: install pods
+        run: yarn app ios:pod
       - name: run fastlane
         run: fastlane dev
         working-directory: ./apps/app/ios
