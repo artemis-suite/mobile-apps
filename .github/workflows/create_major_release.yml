@@ -1,13 +1,16 @@
 name: create-major-release
 on: workflow_dispatch
 jobs:
-  build:
+  build-and-deploy:
     runs-on: macos-latest
+    environment: dev
+    env:
+      MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: "14"
+          node-version: "14.18.0"
       - name: install deps
         run: yarn install
       - name: run fastlane
