@@ -46,8 +46,9 @@ platform :ios do
   lane :dev do |options|
     setup_ci
     increment_version_number(bump_type:options.fetch(:build_type,"minor"))
-    commit_version_bump(message: "Version Bump", xcodeproj: "./app.xcodeproj")
     increment_build_number(build_number:1)
+    commit_version_bump(message: "Version Bump", xcodeproj: "./app.xcodeproj")
+    push_to_git_remote
     sync_code_signing({type: "adhoc",readonly: true})
     update_plists
     build(export_method: "ad-hoc")
