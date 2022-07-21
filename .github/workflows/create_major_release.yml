@@ -1,9 +1,5 @@
 name: create-major-release
-on:
-  workflow_dispatch:
-    inputs:
-      version:
-        required: true
+on: workflow_dispatch
 jobs:
   build-and-deploy:
     runs-on: macos-latest
@@ -12,7 +8,6 @@ jobs:
       FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
       MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-      VERSION_NUMBER: ${{ github.event.inputs.version }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
