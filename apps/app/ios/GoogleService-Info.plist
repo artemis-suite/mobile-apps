@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>312972501376-f8tf0hol38v25gn09f2n7bj0m9qmqqbq.apps.googleusercontent.com</string>
+	<string>113029586573-9jels94ckpdiu0oq91mqrur27fj99vq3.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.312972501376-f8tf0hol38v25gn09f2n7bj0m9qmqqbq</string>
+	<string>com.googleusercontent.apps.113029586573-9jels94ckpdiu0oq91mqrur27fj99vq3</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBo2JgCoGIid58BGSuZo46-JtIJXiZhV7M</string>
+	<string>AIzaSyC1c8ovbbdAfRBNPEttVjlzarWjQejgKF4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>312972501376</string>
+	<string>113029586573</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>org.artemis-suite.app</string>
 	<key>PROJECT_ID</key>
-	<string>artemis-suite</string>
+	<string>artemis-suite-alpha</string>
 	<key>STORAGE_BUCKET</key>
-	<string>artemis-suite.appspot.com</string>
+	<string>artemis-suite-alpha.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:312972501376:ios:09f5cfd4c334f3e0572165</string>
+	<string>1:113029586573:ios:ef21bc6773d0154e200cc4</string>
 </dict>
 </plist>

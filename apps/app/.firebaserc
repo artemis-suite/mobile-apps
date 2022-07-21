@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "artemis-suite-alpha"
+  },
+  "targets": {
+    "artemis-suite-alpha": {
+      "hosting": {
+        "aot": [
+          "artemis-ota-alpha"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+name: update-dev
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  build-and-deploy:
+    runs-on: macos-latest
+    environment: dev
+    env:
+      OTA_URL: ${{ secrets.OTA_URL }}
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14.18.0"
+      - name: install deps
+        run: yarn install
+      - name: export
+        run: yarn app expo export --public-url "$OTA_URL" --non-interactive
+      - name: publish
+        run: yarn app ota
