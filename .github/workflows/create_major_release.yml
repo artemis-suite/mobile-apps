@@ -1,5 +1,9 @@
 name: create-major-release
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        required: true
 jobs:
   build-and-deploy:
     runs-on: macos-latest
@@ -8,15 +12,16 @@ jobs:
       FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
       MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+      VERSION_NUMBER: ${{ github.event.inputs.version }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: "14.18.0"
       - name: install deps
-        run: yarn install
-      - name: install pods
-        run: yarn app ios:pod
+        run: |
+          yarn install
+          yarn app ios:pod
       - name: run fastlane
         run: fastlane dev
         working-directory: ./apps/app/ios

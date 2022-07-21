@@ -42,12 +42,12 @@ platform :ios do
   end 
 
   desc "build an dev release with dev certificates, suitable for distributing in firebase app distribution only"
-  lane :dev do |options|
+  lane :dev do
     setup_ci
     sync_code_signing({type: "adhoc",readonly: true})
     update_plists
     xcversion(version: "13.2.1")
-    increment_version_number(bump_type:options.fetch(:build_type,"minor"))
+    increment_version_number(version_number:ENV["VERSION_NUMBER"])
     increment_build_number(build_number:1)
     build(export_method: "ad-hoc")
     firebase_app_distribution(
