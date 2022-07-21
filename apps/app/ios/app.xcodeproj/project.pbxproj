@@ -13,6 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1DD2A15CE3114B0EAD764C83 /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 607C95843A0C480FA007C32C /* Poppins-Regular.otf */; };
 		23952595A5034C779009B0A8 /* Poppins-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2FA9728EBCDF432EA3DB1569 /* Poppins-Bold.otf */; };
+		2FB5A8FAA1920A6B7F2B2C56 /* libPods-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E26C8734A5305234FCF446AC /* libPods-app.a */; };
 		319F9E6834F14C998DB4616D /* background-login.png in Resources */ = {isa = PBXBuildFile; fileRef = 8774A7AEFEDC4243BBC16F4B /* background-login.png */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		5642506508CA403CA19A312B /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A66317E052A4D189CC5D37B /* Poppins-Medium.otf */; };
@@ -52,6 +53,7 @@
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = app/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		C25B8A1152434683B9E3BC1E /* background-landing.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "background-landing.png"; path = "../../../packages/elements/src/assets/images/background-landing.png"; sourceTree = "<group>"; };
+		E26C8734A5305234FCF446AC /* libPods-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-app/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6DCEAA287AF0FC00D28EDD /* MapKit.framework in Frameworks */,
+				2FB5A8FAA1920A6B7F2B2C56 /* libPods-app.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +92,7 @@
 			children = (
 				9C6DCEA9287AF0FC00D28EDD /* MapKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				E26C8734A5305234FCF446AC /* libPods-app.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -375,7 +379,7 @@
 				CODE_SIGN_ENTITLEMENTS = app/appDebug.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SABR8F4R38;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -408,7 +412,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SABR8F4R38;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = app/Info.plist;
