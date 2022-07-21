@@ -1,9 +1,9 @@
-name: create-major-release
+name: update-major-release-beta
 on: workflow_dispatch
 jobs:
   build-and-deploy:
     runs-on: macos-latest
-    environment: dev
+    environment: test
     env:
       FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
@@ -15,6 +15,9 @@ jobs:
       FIREBASE_IOS_PROJECT_ID: ${{ secrets.FIREBASE_IOS_PROJECT_ID }}
       FIREBASE_IOS_STORAGE_BUCKET: ${{ secrets.FIREBASE_IOS_STORAGE_BUCKET }}
       FIREBASE_IOS_GOOGLE_APP_ID: ${{ secrets.FIREBASE_IOS_GOOGLE_APP_ID }}
+      APPSTORE_KEY_ID: ${{ secrets.APPSTORE_KEY_ID }}
+      APPSTORE_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+      APPSTORE_KEY_CONTENT: ${{ secrets.APPSTORE_KEY_CONTENT }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -25,5 +28,5 @@ jobs:
           yarn install
           yarn app ios:pod
       - name: run fastlane
-        run: fastlane dev build_type:major
+        run: fastlane beta
         working-directory: ./apps/app/ios

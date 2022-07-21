@@ -25,5 +25,5 @@ jobs:
           yarn install
           yarn app ios:pod
       - name: run fastlane
-        run: fastlane dev build_type:major
+        run: fastlane dev build_type:minor
         working-directory: ./apps/app/ios
