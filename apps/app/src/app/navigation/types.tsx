@@ -26,7 +26,7 @@ export type RootStackScreenProps<T extends keyof RootStackParamList> =
 export type MainTabsParamList = {
     Contacts: NavigatorScreenParams<ContactsStackParamList>,
     Reports: NavigatorScreenParams<ReportsStackParamList>,
-    Notifications: undefined,
+    Calendar: undefined,
     Profile: undefined,
 }
 

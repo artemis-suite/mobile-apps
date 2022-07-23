@@ -1,7 +1,7 @@
 
 import { Screen, Image, Text, Box, Button } from "@artemis-mobile/elements";
 
-import { RootStackScreenProps } from "~app/navigation/types"
+import { RootStackScreenProps } from "app/navigation/types"
 
 type ScreenProps = RootStackScreenProps<"Landing">;
 

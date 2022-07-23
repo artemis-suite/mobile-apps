@@ -10,7 +10,7 @@ platform :ios do
       plist_path: "GoogleService-Info.plist",
       block: proc do |plist|
           plist[:CLIENT_ID] = ENV["FIREBASE_IOS_CLIENT_ID"]
-          plist[:REVERSED_CLIENT_ID] = ["FIREBASE_IOS_REVERSED_CLIENT_ID"]
+          plist[:REVERSED_CLIENT_ID] = ENV["FIREBASE_IOS_REVERSED_CLIENT_ID"]
           plist[:API_KEY] = ENV["FIREBASE_IOS_API_KEY"]
           plist[:GCM_SENDER_ID] = ENV["FIREBASE_IOS_GCM_SENDER_ID"]
           plist[:PROJECT_ID] = ENV["FIREBASE_IOS_PROJECT_ID"]
@@ -23,6 +23,11 @@ platform :ios do
       block: proc do |plist|
           plist[:EXUpdatesURL] = ENV["OTA_URL"]
         end
+    )
+    update_plist(
+      plist_path: "app/info.plist",
+      block: proc do |plist|
+        plist[:CFBundleURLSchemes] = ENV["FIREBASE_IOS_REVERSED_CLIENT_ID"]
     )
   end 
   

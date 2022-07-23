@@ -1,4 +1,4 @@
-import { Text as RNText, TextProps as RNTextProps } from "react-native";
+import { Text as RNText, TextProps as RNTextProps, Animated } from "react-native";
 import {
     createRestyleComponent, textRestyleFunctions,
     PositionProps, position,
@@ -7,9 +7,6 @@ import {
 } from "@shopify/restyle";
 
 import { Theme } from "../theme/default-theme";
-
-//export type TextProps = RNTextProps<Theme>;
-//export const Text = createText<Theme>(RNText);
 
 export type TextProps =
     RNTextProps &
@@ -25,3 +22,4 @@ export const Text = createRestyleComponent<TextProps, Theme>(
 )
 
 export default Text;
+export const AnimatedText = Animated.createAnimatedComponent(Text);

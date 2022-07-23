@@ -4,7 +4,7 @@ import { HeaderBackButton } from "@react-navigation/elements";
 
 import { Text, Icon } from "@artemis-mobile/elements";
 
-import { tabsScreen } from "./tabs";
+import { TabsScreen } from "./tabs";
 import SplashScreen from 'auth/screens/splash';
 import LandingScreen from "auth/screens/landing";
 import LoginPhoneNumberScreen from "auth/screens/login-phone-number";
@@ -29,7 +29,7 @@ const RootStackScreen = () => {
             IsInitialized === false
                 ? <rootStack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false, animation: "none" }} />
                 : isAuthenticated
-                    ? <rootStack.Screen name="Main" component={tabsScreen} options={{ headerShown: false }} />
+                    ? <rootStack.Screen name="Main" component={TabsScreen} options={{ headerShown: false }} />
                     : <>
                         <rootStack.Screen name="Landing" component={LandingScreen} options={{ headerShown: false, animation: "fade" }} />
                         <rootStack.Group screenOptions={({ navigation }) => {
