@@ -1,4 +1,4 @@
-import { createTheme } from "@shopify/restyle";
+import { createTheme, useTheme } from "@shopify/restyle";
 
 const theme = createTheme({
     colors: {
@@ -59,7 +59,8 @@ const theme = createTheme({
     },
     borderRadii: {
         s: 6,
-        m: 12
+        m: 12,
+        l: 24,
     },
     zIndices: {
         forward: 1,
@@ -253,3 +254,5 @@ const RTLTheme = {
 
 export type Theme = typeof theme;
 export { LTRTheme, RTLTheme };
+
+export const useAppTheme = () => useTheme<Theme>();

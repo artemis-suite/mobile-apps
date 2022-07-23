@@ -13,6 +13,7 @@ export * from "./components/screen";
 export * from "./components/activity-indicator";
 export * from "./components/icon";
 export * from "./components/verification-code";
+export * from "./components/pressable-area";
 
 // composit components
 export { Image, Input };

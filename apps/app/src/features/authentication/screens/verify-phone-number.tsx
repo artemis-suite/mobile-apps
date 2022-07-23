@@ -7,14 +7,13 @@ import { useAuthSelector, useAuthAction } from "auth/slice";
 
 type ScreenProps = RootStackScreenProps<"LoginPhoneNumber">;
 
-export default function VerifyPhoneNumberScreen({ navigation }: ScreenProps) {
+export default function VerifyPhoneNumberScreen() {
 
     const phoneNumber = useAuthSelector("selectPhoneNumber");
     const verifyCode = useAuthAction("verifyCode");
 
     const onLoginPressed = useCallback(async (verificationCode: string) => {
         await verifyCode([verificationCode]);
-        navigation.navigate("Main");
     }, [])
     return <Screen height="100%">
         <Box padding="xl" flexDirection="row-reverse">
