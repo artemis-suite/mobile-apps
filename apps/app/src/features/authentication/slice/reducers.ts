@@ -1,6 +1,5 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { FirebaseAuthTypes } from "@react-native-firebase/auth"
-import { AuthState, initialState } from "./state";
+import { AuthState, initialState, MyProfile } from "./state";
 
 export const reducers = {
     "initialized": (state: AuthState) => {
@@ -9,9 +8,16 @@ export const reducers = {
     "login/start": (state: AuthState, action: PayloadAction<string>) => {
         state.phoneNumber = action.payload;
     },
-    "login/fulfill": (state: AuthState) => {
+    "login/fulfill": (state: AuthState, action: PayloadAction<MyProfile>) => {
         state.isAuthenticated = true;
         state.phoneNumber = null;
+        state.profile = {
+            displayName: action.payload.displayName,
+            phoneNumber: action.payload.phoneNumber,
+            photoURL: action.payload.photoURL,
+            role: action.payload.role,
+            lastLoginDate: action.payload.lastLoginDate
+        }
 
     },
     "login/failed": (state: AuthState, action: PayloadAction<string>) => {

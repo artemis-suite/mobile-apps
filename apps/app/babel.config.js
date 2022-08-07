@@ -11,6 +11,10 @@ module.exports = function (api) {
 						app: "./src/app",
 						common: "./src/common",
 						auth: "./src/features/authentication",
+						contacts: "./src/features/contacts",
+						profile: "./src/features/profile",
+						calendar: "./src/features/calendar",
+						reports: "./src/features/reports",
 					},
 					extensions: [
 						".js",

@@ -26,6 +26,7 @@
 		C26FF8EBB7BE4A1F87881554 /* NotoSansArabic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4813DA7336EE412184B3C1D2 /* NotoSansArabic-Medium.ttf */; };
 		EC2D523745D54C4DBD90F5E5 /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3E2133F10D848028DCA9BCF /* Poppins-SemiBold.otf */; };
 		FF31BB74B01443A981D3CF69 /* NotoSansArabic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28CC723FCD2A462C954462A7 /* NotoSansArabic-Regular.ttf */; };
+		64FBB17CAF3C4981B12D6968 /* icon_missing_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 44B51C4F2AF346F18B8BE05B /* icon_missing_avatar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		E26C8734A5305234FCF446AC /* libPods-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-app/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		44B51C4F2AF346F18B8BE05B /* icon_missing_avatar.png */ = {isa = PBXFileReference; name = "icon_missing_avatar.png"; path = "../../../packages/elements/src/assets/images/icon_missing_avatar.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				28CC723FCD2A462C954462A7 /* NotoSansArabic-Regular.ttf */,
 				0CEBE181023348E8A213FE77 /* NotoSansArabic-SemiBold.ttf */,
 				8774A7AEFEDC4243BBC16F4B /* background-login.png */,
+				44B51C4F2AF346F18B8BE05B /* icon_missing_avatar.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				8521AAA473FE45519C083A5E /* NotoSansArabic-SemiBold.ttf in Resources */,
 				319F9E6834F14C998DB4616D /* background-login.png in Resources */,
 				9CAB885C28736B4B0059D705 /* GoogleService-Info.plist in Resources */,
+				64FBB17CAF3C4981B12D6968 /* icon_missing_avatar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,4 +1,5 @@
 import { createTheme, useTheme } from "@shopify/restyle";
+import { Dimensions } from "react-native";
 
 const theme = createTheme({
     colors: {
@@ -7,7 +8,7 @@ const theme = createTheme({
         "primary/300": "#ABBDFC",
         "primary/400": "#859FFB",
         "primary/500": "#4E74F9",
-        "prinary/600": "#083CF0",
+        "primary/600": "#083CF0",
 
         "gray/100": "#F4F4F8",
         "gray/200": "#E9E9F1",
@@ -61,6 +62,8 @@ const theme = createTheme({
         s: 6,
         m: 12,
         l: 24,
+        "avatar-small": 25,
+        "avatar-large": 50
     },
     zIndices: {
         forward: 1,
@@ -104,7 +107,7 @@ const theme = createTheme({
         },
         p2b: {
             fontSize: 14,
-            fontWeight: "500",
+            fontWeight: "700",
             fontStyle: "normal",
         },
         p2: {
@@ -114,7 +117,7 @@ const theme = createTheme({
         },
         p3b: {
             fontSize: 12,
-            fontWeight: "500",
+            fontWeight: "700",
             fontStyle: "normal",
         },
         p3: {

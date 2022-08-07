@@ -9,13 +9,18 @@ import {
     VisibleProps, visible,
     createRestyleComponent
 } from "@shopify/restyle";
-import { Image as RNImage, ImageProps as RNImageProps } from "react-native";
 
+//import { Image as RNImage, ImageProps as RNImageProps } from "react-native";
+import { createImageProgress } from 'react-native-image-progress';
+import FastImage, { FastImageProps } from 'react-native-fast-image';
 import type { Theme } from "../theme/default-theme";
+
+const RNImage = createImageProgress(FastImage);
 
 export type ImageProps = {
 
-} & RNImageProps
+} //& RNImageProps
+    & typeof RNImage.defaultProps
     & BackgroundColorProps<Theme>
     & OpacityProps<Theme>
     & VisibleProps<Theme>

@@ -23,13 +23,15 @@ export type InputTextProps = {
     onChange?: (value: string) => void,
     state?: Exclude<InputState, "focus">,
     type?: 'default' | 'email-address' | 'phone-pad' | 'number-pad' | 'decimal-pad',
-    direction?: "RTL" | "LTR"
+    direction?: "RTL" | "LTR",
+    disabled?: boolean
 }
 
 export function InputText({
     type = "default",
     state = "none",
     direction = "LTR",
+    disabled = false,
     label,
     placeholder,
     icon,
@@ -47,15 +49,21 @@ export function InputText({
             borderRadius="m"
             borderStyle="solid"
             borderWidth={1}
-            borderColor={colorMap[stateOverride]}>
+            borderColor={colorMap[stateOverride]}
+            backgroundColor={disabled ? "gray/200" : "transparent"}
+        >
             {icon && <Icon name={icon} size="l" color={colorMap[stateOverride]} />}
             <TextInput
+                selectTextOnFocus
+                autoCorrect={false}
                 textAlign={direction === "LTR" ? "left" : "right"}
                 keyboardType={type}
                 onFocus={() => setStateOverride("focus")}
                 onEndEditing={() => setStateOverride(state)}
                 value={value} onChangeText={onChange}
-                flex={1} placeholder={placeholder} />
+                flex={1} placeholder={placeholder}
+                removeClippedSubviews
+            />
         </Box>
     </Box >)
 }

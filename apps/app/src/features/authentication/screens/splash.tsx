@@ -13,7 +13,7 @@ export default function SplashScreen() {
     useEffect(() => {
         setTimeout(() => {
             initialized();
-        }, 5000);
+        }, 1000);
     }, []);
 
     return <Screen alignItems="center">

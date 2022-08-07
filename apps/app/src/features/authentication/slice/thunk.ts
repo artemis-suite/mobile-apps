@@ -9,12 +9,22 @@ import { actions } from "./slice";
 // Try to store it as local variable since it will not be used 
 // threw multiple lunches of the app.
 let confirmationResult: FirebaseAuthTypes.ConfirmationResult = null;
+let unsubscribe = null;
 
-export const listenToLoginChange = (): ThunkAction => {
+const firebaseAuth = auth();
+
+export const subscribeToLoginChange = (): ThunkAction => {
     return async (dispatch) => {
-        auth().onAuthStateChanged(user => {
-            if (user) { // login
-                dispatch(actions["login/fulfill"]());
+        unsubscribe = firebaseAuth.onAuthStateChanged(async user => {
+            if (user) { // loginconst 
+                const idTokenResult = await user.getIdTokenResult();
+                dispatch(actions["login/fulfill"]({
+                    displayName: user.displayName,
+                    phoneNumber: user.phoneNumber,
+                    photoURL: user.photoURL,
+                    role: idTokenResult.claims["role"],
+                    lastLoginDate: idTokenResult.authTime
+                }));
             }
             else {  // logout
                 dispatch(actions.logout());
@@ -23,9 +33,15 @@ export const listenToLoginChange = (): ThunkAction => {
     }
 }
 
+export const unsubscribeToLoginChange = (): ThunkAction => {
+    return async () => {
+        unsubscribe();
+    }
+}
+
 export const sendVerificationCode = (phoneNumber: string): ThunkAction => {
     return async (dispatch) => {
-        confirmationResult = await auth().signInWithPhoneNumber(phoneNumber, true);
+        confirmationResult = await firebaseAuth.signInWithPhoneNumber(phoneNumber, true);
         dispatch(actions["login/start"](phoneNumber));
     }
 }
