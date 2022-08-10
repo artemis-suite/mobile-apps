@@ -4,7 +4,7 @@ import { HeaderBackButton } from "@react-navigation/elements";
 
 import { Text, Icon } from "@artemis-mobile/elements";
 
-import { useAuthAction, useAuthSelector } from 'auth/slice';
+import { TabsScreen } from "./tabs";
 import SplashScreen from 'auth/screens/splash';
 import LandingScreen from "auth/screens/landing";
 import LoginPhoneNumberScreen from "auth/screens/login-phone-number";

@@ -10,7 +10,6 @@ import { ProfileStackScreen } from "./profile";
 
 import { MainTabsParamList } from "./types";
 
-
 const bottomTabs = createBottomTabNavigator<MainTabsParamList>();
 
 //TODO: move this component to elements in a generic way
