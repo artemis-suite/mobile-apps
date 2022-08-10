@@ -20,10 +20,10 @@ type dispatchThunk = keyof typeof thunk;
 type Dispatchables = dispatchActions | dispatchThunk;
 
 // State 
-export type { AuthState } from "./state";
+export type { ProfileState } from "./state";
 
 // selectors
-export function useAuthSelector<
+export function useProfileSelector<
     TKey extends keyof typeof localSelectors,
     TFuncParams extends Parameters<typeof localSelectors[TKey]>,
     TParams extends TFuncParams['length'] extends 0 ? undefined :
@@ -36,7 +36,7 @@ export function useAuthSelector<
 }
 
 // actions
-export function useAuthAction<
+export function useProfileAction<
     TKey extends Dispatchables,
     TParams = TKey extends dispatchThunk
     ? Parameters<typeof thunk[TKey]>

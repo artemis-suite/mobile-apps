@@ -1,15 +1,18 @@
 import { useRef, useEffect } from "react";
-import { Animated, Platform, Easing } from "react-native";
-import { createBottomTabNavigator, BottomTabBarProps, BottomTabBarButtonProps } from "@react-navigation/bottom-tabs";
+import { Animated, Easing } from "react-native";
+import { createBottomTabNavigator, BottomTabBarButtonProps } from "@react-navigation/bottom-tabs";
 import { Icon, Box, Text, AnimatedBox, PressableArea, useAppTheme, IconProps } from "@artemis-mobile/elements";
 
+//TODO: should be removed, use only to remove warning
 import HomeScreen from "../../features/contacts/screens/home";
+
+import { ProfileStackScreen } from "./profile";
 
 import { MainTabsParamList } from "./types";
 
-
 const bottomTabs = createBottomTabNavigator<MainTabsParamList>();
 
+//TODO: move this component to elements in a generic way
 const TabButton = (props: BottomTabBarButtonProps & { icon: IconProps["name"], label: string }) => {
     const { onPress, accessibilityState, icon, label } = props;
     const focused = accessibilityState.selected;
@@ -21,17 +24,17 @@ const TabButton = (props: BottomTabBarButtonProps & { icon: IconProps["name"], l
             Animated.timing(animationValue, {
                 toValue: 1,
                 duration: 500,
-                easing: Easing.in(Easing.bounce),
+                easing: Easing.bounce,
                 useNativeDriver: true
             }).start();
         } else {
             Animated.timing(animationValue, {
                 toValue: 0,
-                duration: 500,
-                easing: Easing.out(Easing.exp),
+                duration: 300,
+                easing: Easing.ease,
                 useNativeDriver: true,
 
-            }).start()
+            }).start();
         }
     }, [focused])
 
@@ -118,7 +121,7 @@ export const TabsScreen = () => {
             }} />
         <bottomTabs.Screen
             name="Profile"
-            component={HomeScreen}
+            component={ProfileStackScreen}
             options={{
                 headerShown: false,
                 tabBarButton: (props) => <TabButton {...props} icon="fa-user-alt" label="Profile" />

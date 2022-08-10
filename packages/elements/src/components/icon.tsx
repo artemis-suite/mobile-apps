@@ -8,13 +8,19 @@ import { faHome } from "@fortawesome/free-solid-svg-icons/faHome";
 import { faChartLine } from "@fortawesome/free-solid-svg-icons/faChartLine";
 import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons/faCalendarAlt";
 import { faUserAlt } from "@fortawesome/free-solid-svg-icons/faUserAlt";
+import { faLanguage } from "@fortawesome/free-solid-svg-icons/faLanguage";
+import { faPlusSquare } from "@fortawesome/free-solid-svg-icons/faPlusSquare";
+import { faLock } from "@fortawesome/free-solid-svg-icons/faLock";
+import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons/faCircleChevronRight";
 
 import { Theme } from '../theme/default-theme';
 
 library.add(faMobileAlt, faArrowLeft, faHome, faChartLine, faCalendarAlt, faUserAlt);
 
 export type IconProps = {
-    name: "fa-mobile-alt" | "fa-arrow-left" | "fa-home" | "fa-chart-line" | "fa-calendar-alt" | "fa-user-alt"
+    name:
+    "fa-mobile-alt" | "fa-arrow-left" | "fa-home" | "fa-chart-line" | "fa-calendar-alt" | "fa-user-alt" | "fa-language" |
+    "fa-plus-square" | "fa-lock" | "fa-circle-chevron-right"
     size?: "s" | "m" | "l" | "xl"
 } & ColorProps<Theme>
 

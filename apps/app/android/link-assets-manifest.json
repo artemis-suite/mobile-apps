@@ -40,6 +40,10 @@
     {
       "path": "../../packages/elements/src/assets/images/background-login.png",
       "sha1": "c2f3a22ee83434f13d1141f745b241253b70b4f6"
+    },
+    {
+      "path": "../../packages/elements/src/assets/images/icon_missing_avatar.png",
+      "sha1": "b2d15708a51531eef4c7a695d84a4aa4dc44b895"
     }
   ]
 }

@@ -1,12 +1,28 @@
 {
   "projects": {
-    "default": "artemis-suite-alpha"
+    "dev": "artemis-suite-alpha",
+    "test": "artemis-suite-beta",
+    "prod": "artemis-suite"
   },
   "targets": {
     "artemis-suite-alpha": {
       "hosting": {
-        "aot": [
+        "ota": [
           "artemis-ota-alpha"
+        ]
+      }
+    },
+    "artemis-suite-beta": {
+      "hosting": {
+        "ota": [
+          "artemis-ota-beta"
+        ]
+      }
+    },
+    "artemis-suite": {
+      "hosting": {
+        "ota": [
+          "artemis-ota"
         ]
       }
     }

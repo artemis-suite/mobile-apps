@@ -27,7 +27,7 @@ export type MainTabsParamList = {
     Contacts: NavigatorScreenParams<ContactsStackParamList>,
     Reports: NavigatorScreenParams<ReportsStackParamList>,
     Calendar: undefined,
-    Profile: undefined,
+    Profile: NavigatorScreenParams<ProfileStackParamList>,
 }
 
 export type MainTabsScreenProps<T extends keyof MainTabsParamList> =
@@ -41,10 +41,7 @@ export type MainTabsScreenProps<T extends keyof MainTabsParamList> =
 //#region [ Contacts ]
 
 export type ContactsStackParamList = {
-    Landing: undefined,
-    SearchResult: undefined,
-    InfoWizard: undefined,
-    Attendance: undefined
+
 }
 
 export type ContactsStackScreenProps<T extends keyof ContactsStackParamList> =
@@ -58,16 +55,34 @@ export type ContactsStackScreenProps<T extends keyof ContactsStackParamList> =
 //#region [ Reports ]
 
 export type ReportsStackParamList = {
-    Landing: undefined,
-    NeedAttention: undefined,
-    BirthDays: undefined
-    Missing: undefined,
-    NotCalled: undefined,
+    // Landing: undefined,
+    // NeedAttention: undefined,
+    // BirthDays: undefined
+    // Missing: undefined,
+    // NotCalled: undefined,
 }
 
 export type ReportsStackScreenProps<T extends keyof ReportsStackParamList> =
     CompositeScreenProps<
         NativeStackScreenProps<ReportsStackParamList, T>,
+        BottomTabScreenProps<MainTabsParamList>
+    >
+
+//#endregion
+
+
+//#region [ Profile ] 
+
+export type ProfileStackParamList = {
+    Settings: undefined,
+    Me: undefined,
+    Languages: undefined,
+    Members: undefined
+}
+
+export type ProfileStackScreenProps<T extends keyof ProfileStackParamList> =
+    CompositeScreenProps<
+        NativeStackScreenProps<ProfileStackParamList, T>,
         BottomTabScreenProps<MainTabsParamList>
     >
 
