@@ -15,7 +15,9 @@ import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons/faCircle
 
 import { Theme } from '../theme/default-theme';
 
-library.add(faMobileAlt, faArrowLeft, faHome, faChartLine, faCalendarAlt, faUserAlt);
+library.add(
+    faMobileAlt, faArrowLeft, faHome, faChartLine, faCalendarAlt, faUserAlt, faLanguage,
+    faPlusSquare, faLock, faCircleChevronRight);
 
 export type IconProps = {
     name:

@@ -1,18 +1,16 @@
 import { useEffect } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { HeaderBackButton } from "@react-navigation/elements";
 
-import { Text, Icon } from "@artemis-mobile/elements";
-
-import { TabsScreen } from "./tabs";
 import SplashScreen from 'auth/screens/splash';
 import LandingScreen from "auth/screens/landing";
 import LoginPhoneNumberScreen from "auth/screens/login-phone-number";
 import VerifyPhoneNumberScreen from "auth/screens/verify-phone-number";
+import { useAuthAction, useAuthSelector } from 'auth/slice';
 
 import { TabsScreen } from "./tabs";
 import { RootStackParamList } from "./types";
 import { screenOptions } from "./common";
+
 
 const rootStack = createNativeStackNavigator<RootStackParamList>();
 
