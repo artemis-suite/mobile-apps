@@ -1,0 +1,20 @@
+{
+    "settings": {
+        "screenTitle": "ملفي الشخصي",
+        "noNameText": "<<ااسم غير محدد>>",
+        "lastLoginLabel": "اخر تسجيل للدخول",
+        "languageLabel": "اللغه",
+        "noMembersMessage": "لا يوجد مستخدمين, اضف مستخدم جديد",
+        "inviteMemberButton": "اضافه",
+        "logoutButton": "تسجيل خروج",
+        "logoutConfirmationMessage": "هل أنت متأكد من رغبتك في تسجيل الخروج؟",
+        "logoutConfirmationOkButton": "تاكيد",
+        "logoutConfirmationCancelButton": "الغاء"
+    },
+    "me": {
+        "photoURLLabel": "رابط الصورة",
+        "displayNameLabel": "الاسم",
+        "roleLabel": "الوظيفة",
+        "saveButton": "حفظ"
+    }
+}

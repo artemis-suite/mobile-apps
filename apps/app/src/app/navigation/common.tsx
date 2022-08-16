@@ -1,7 +1,9 @@
 import { Text, Icon } from "@artemis-mobile/elements";
 import { HeaderBackButton } from "@react-navigation/elements";
+import i18n from "app/i18n";
 
 export const screenOptions = ({ navigation }) => {
+
     return {
         headerShadowVisible: false,
         headerTitle: ({ children }) =>
@@ -10,7 +12,7 @@ export const screenOptions = ({ navigation }) => {
             canGoBack
                 ? (<HeaderBackButton
                     onPress={() => { navigation.goBack() }}
-                    backImage={() => <Icon name="fa-arrow-left" size="l" />} />)
+                    backImage={() => <Icon name={i18n.dir() === "rtl" ? "fa-arrow-right" : "fa-arrow-left"} size="l" />} />)
                 : null
     }
 }

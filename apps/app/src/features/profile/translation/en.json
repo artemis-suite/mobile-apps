@@ -1,0 +1,20 @@
+{
+    "settings": {
+        "screenTitle": "Profile",
+        "noNameText": "<<No Name>>",
+        "lastLoginLabel": "Last Login",
+        "languageLabel": "Language",
+        "noMembersMessage": "No Members Yet, Add one",
+        "inviteMemberButton": "Add",
+        "logoutButton": "Logout",
+        "logoutConfirmationMessage": "Are you sure you want to logout?",
+        "logoutConfirmationOkButton": "OK",
+        "logoutConfirmationCancelButton": "Cancel"
+    },
+    "me": {
+        "photoURLLabel": "Photo URL",
+        "displayNameLabel": "Display Name",
+        "roleLabel": "Role",
+        "saveButton": "Save"
+    }
+}

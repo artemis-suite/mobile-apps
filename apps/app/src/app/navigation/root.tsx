@@ -35,8 +35,8 @@ const RootStackScreen = () => {
                     : <>
                         <rootStack.Screen name="Landing" component={LandingScreen} options={{ headerShown: false, animation: "fade" }} />
                         <rootStack.Group screenOptions={screenOptions}>
-                            <rootStack.Screen name="LoginPhoneNumber" component={LoginPhoneNumberScreen} options={{ title: "تسجيل دخول" }} />
-                            <rootStack.Screen name="LoginVerification" component={VerifyPhoneNumberScreen} options={{ title: "تسجيل دخول" }} />
+                            <rootStack.Screen name="LoginPhoneNumber" component={LoginPhoneNumberScreen} />
+                            <rootStack.Screen name="LoginVerification" component={VerifyPhoneNumberScreen} />
                         </rootStack.Group>
                     </>
 
