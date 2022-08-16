@@ -18,6 +18,7 @@
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		5642506508CA403CA19A312B /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A66317E052A4D189CC5D37B /* Poppins-Medium.otf */; };
 		5EF275AC447A4A6CBB0ABB19 /* NotoSansArabic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BC82E42D0CB49CE93E4755E /* NotoSansArabic-Bold.ttf */; };
+		64FBB17CAF3C4981B12D6968 /* icon_missing_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 44B51C4F2AF346F18B8BE05B /* icon_missing_avatar.png */; };
 		8521AAA473FE45519C083A5E /* NotoSansArabic-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CEBE181023348E8A213FE77 /* NotoSansArabic-SemiBold.ttf */; };
 		9C6DCEAA287AF0FC00D28EDD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6DCEA9287AF0FC00D28EDD /* MapKit.framework */; };
 		9CAB885C28736B4B0059D705 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CAB885B28736B4B0059D705 /* GoogleService-Info.plist */; };
@@ -26,7 +27,6 @@
 		C26FF8EBB7BE4A1F87881554 /* NotoSansArabic-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4813DA7336EE412184B3C1D2 /* NotoSansArabic-Medium.ttf */; };
 		EC2D523745D54C4DBD90F5E5 /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3E2133F10D848028DCA9BCF /* Poppins-SemiBold.otf */; };
 		FF31BB74B01443A981D3CF69 /* NotoSansArabic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28CC723FCD2A462C954462A7 /* NotoSansArabic-Regular.ttf */; };
-		64FBB17CAF3C4981B12D6968 /* icon_missing_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 44B51C4F2AF346F18B8BE05B /* icon_missing_avatar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +40,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = app/main.m; sourceTree = "<group>"; };
 		28CC723FCD2A462C954462A7 /* NotoSansArabic-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansArabic-Regular.ttf"; path = "../../../packages/elements/src/assets/fonts/NotoSansArabic-Regular.ttf"; sourceTree = "<group>"; };
 		2FA9728EBCDF432EA3DB1569 /* Poppins-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.otf"; path = "../../../packages/elements/src/assets/fonts/Poppins-Bold.otf"; sourceTree = "<group>"; };
+		44B51C4F2AF346F18B8BE05B /* icon_missing_avatar.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = icon_missing_avatar.png; path = ../../../packages/elements/src/assets/images/icon_missing_avatar.png; sourceTree = "<group>"; };
 		4813DA7336EE412184B3C1D2 /* NotoSansArabic-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansArabic-Medium.ttf"; path = "../../../packages/elements/src/assets/fonts/NotoSansArabic-Medium.ttf"; sourceTree = "<group>"; };
 		607C95843A0C480FA007C32C /* Poppins-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.otf"; path = "../../../packages/elements/src/assets/fonts/Poppins-Regular.otf"; sourceTree = "<group>"; };
 		6C2E3173556A471DD304B334 /* Pods-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app.debug.xcconfig"; path = "Target Support Files/Pods-app/Pods-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		E26C8734A5305234FCF446AC /* libPods-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-app/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		44B51C4F2AF346F18B8BE05B /* icon_missing_avatar.png */ = {isa = PBXFileReference; name = "icon_missing_avatar.png"; path = "../../../packages/elements/src/assets/images/icon_missing_avatar.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

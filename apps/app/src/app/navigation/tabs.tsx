@@ -3,13 +3,15 @@ import { Animated, Easing } from "react-native";
 import { createBottomTabNavigator, BottomTabBarButtonProps } from "@react-navigation/bottom-tabs";
 import { Icon, Box, Text, AnimatedBox, PressableArea, useAppTheme, IconProps } from "@artemis-mobile/elements";
 
+import { translateScope } from "../i18n";
 //TODO: should be removed, use only to remove warning
 import HomeScreen from "../../features/contacts/screens/home";
 
 import { ProfileStackScreen } from "./profile";
-
 import { MainTabsParamList } from "./types";
 
+
+const $t = translateScope("navigation")("tabs");
 const bottomTabs = createBottomTabNavigator<MainTabsParamList>();
 
 //TODO: move this component to elements in a generic way
@@ -62,6 +64,7 @@ const TabButton = (props: BottomTabBarButtonProps & { icon: IconProps["name"], l
                 <Box
                     flexDirection="row"
                     alignItems="center"
+                    justifyContent="flex-start"
                     padding="s"
                     borderRadius="s">
                     <Icon name={icon} color={focused ? "primary/500" : "dark"} />
@@ -103,28 +106,28 @@ export const TabsScreen = () => {
             component={HomeScreen}
             options={{
                 headerShown: false,
-                tabBarButton: (props) => <TabButton {...props} icon="fa-home" label="Home" />
+                tabBarButton: (props) => <TabButton {...props} icon="fa-home" label={$t("Contacts")} />
             }} />
         <bottomTabs.Screen
             name="Reports"
             component={HomeScreen}
             options={{
                 headerShown: false,
-                tabBarButton: (props) => <TabButton {...props} icon="fa-chart-line" label="Reports" />
+                tabBarButton: (props) => <TabButton {...props} icon="fa-chart-line" label={$t("Reports")} />
             }} />
         <bottomTabs.Screen
             name="Calendar"
             component={HomeScreen}
             options={{
                 headerShown: false,
-                tabBarButton: (props) => <TabButton {...props} icon="fa-calendar-alt" label="Calendar" />
+                tabBarButton: (props) => <TabButton {...props} icon="fa-calendar-alt" label={$t("Calendar")} />
             }} />
         <bottomTabs.Screen
             name="Profile"
             component={ProfileStackScreen}
             options={{
                 headerShown: false,
-                tabBarButton: (props) => <TabButton {...props} icon="fa-user-alt" label="Profile" />
+                tabBarButton: (props) => <TabButton {...props} icon="fa-user-alt" label={$t("Profile")} />
             }} />
     </bottomTabs.Navigator >
 }

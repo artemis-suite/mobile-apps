@@ -3,11 +3,14 @@ import { Screen, Box, Button, Avatar, Text, Input } from "@artemis-mobile/elemen
 
 import { selectCurrentProfile } from "app/selectors";
 import { useAppSelector } from "app/store";
+import { translateScope } from "app/i18n";
 import { ProfileStackScreenProps } from "app/navigation/types";
 import { useProfileAction } from "profile/slice";
 
 
 type ScreenProps = ProfileStackScreenProps<"Settings">;
+
+const $t = translateScope("profile")("me");
 
 export default function MeScreen({ navigation }: ScreenProps) {
     const user = useAppSelector(selectCurrentProfile);
@@ -20,12 +23,12 @@ export default function MeScreen({ navigation }: ScreenProps) {
                 <Avatar source={user.photoURL} size="l" />
             </Box>
             <Box marginHorizontal="l" padding="m">
-                <Input.Text label="Photo Url" value={photoURL} onChange={setPhotoURL} />
-                <Input.Text label="Display Name" value={displayName} onChange={setDisplayName} />
-                <Input.Text label="Role" value={user.role} disabled />
+                <Input.Text label={$t("photoURLLabel")} value={photoURL} onChange={setPhotoURL} />
+                <Input.Text label={$t("displayNameLabel")} value={displayName} onChange={setDisplayName} />
+                <Input.Text label={$t("roleLabel")} value={user.role} disabled />
             </Box>
             <Box alignItems="center">
-                <Button variant="primary" label="Save" size="large" onPress={async () => {
+                <Button variant="primary" label={$t("saveButton")} size="large" onPress={async () => {
                     await updateProfileAction([{
                         photoURL,
                         displayName

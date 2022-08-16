@@ -1,0 +1,16 @@
+{
+    "settings": {
+        "screenTitle": "Profile",
+        "lastLoginLabel": "Last Login",
+        "languageLabel": "Language",
+        "noMembersMessage": "No Members Yet, Add one",
+        "inviteMemberButton": "Add",
+        "logoutButton": "Logout"
+    },
+    "me": {
+        "photoURLLabel": "Photo URL",
+        "displayNameLabel": "Display Name",
+        "roleLabel": "Role",
+        "saveButton": "Save"
+    }
+}

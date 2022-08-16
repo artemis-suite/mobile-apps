@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import Flag from 'react-native-flags-typescript';
 
 import { Screen, Card, Text, Item, Box } from "@artemis-mobile/elements";
 
@@ -9,8 +10,11 @@ import { useProfileAction } from "profile/slice";
 import { ProfileStackScreenProps } from "app/navigation/types"
 import { useAppSelector } from "app/store";
 import { selectCurrentProfile } from "app/selectors";
+import { useLocal, translateScope, formatDate } from "app/i18n";
 
 type ScreenProps = ProfileStackScreenProps<"Settings">;
+
+const $t = translateScope("profile")("settings");
 
 const ProfileCard = () => {
     const navigation = useNavigation<ScreenProps["navigation"]>();
@@ -20,11 +24,11 @@ const ProfileCard = () => {
             <Item.Avatar source={user.photoURL} size="l" />
             <Item.Content>
                 <Box flexDirection="row">
-                    <Text variant="p1b">{user.displayName || "<<No Name>>"}</Text>
+                    <Text variant="p1b">{user.displayName || $t("noNameText")}</Text>
                 </Box>
-                <Box flexDirection="row">
-                    <Text variant="p2b">Last Login </Text>
-                    <Text variant="p2">{new Date(user.lastLoginDate).toDateString()}</Text>
+                <Box>
+                    <Text variant="p2b">{$t("lastLoginLabel")}</Text>
+                    <Text variant="p2">{formatDate(user.lastLoginDate)}</Text>
                 </Box>
                 <Box flexDirection="row">
                     <Text variant="p2b">{user.role}</Text>
@@ -35,12 +39,19 @@ const ProfileCard = () => {
 }
 
 const LanguageCard = () => {
+    const { language } = useLocal();
+    const languagesMap = {
+        "en": "GB",
+        "ar": "EG",
+        "sv": "SE"
+    }
+    const navigation = useNavigation<ScreenProps["navigation"]>();
     return (<Card>
-        <Item>
+        <Item onPress={() => navigation.navigate("Languages")}>
             <Item.Icon name="fa-language" />
             <Item.Content flexDirection="row" flex={1} justifyContent="space-between">
-                <Text variant="p1b">Language</Text>
-                <Text variant="p1" textAlign="right"  >Arabic</Text>
+                <Text variant="p1b">{$t("languageLabel")}</Text>
+                <Flag code={languagesMap[language]} type="flat" size={24} style={{ alignSelf: "center" }} />
             </Item.Content>
         </Item>
     </Card>);
@@ -50,12 +61,12 @@ const MembersCard = () => {
     return (<Card>
         <Item bottomDivider>
             <Item.Content alignItems="center" flex={1}>
-                <Text>No Members Yet Add one</Text>
+                <Text>{$t("noMembersMessage")}</Text>
             </Item.Content>
         </Item>
         <Item justifyContent="flex-end">
             <Item.Content>
-                <Text variant="p1b" color="primary/600">Add</Text>
+                <Text variant="p1b" color="primary/600">{$t("inviteMemberButton")}</Text>
             </Item.Content>
             <Item.Icon name="fa-plus-square" color="primary/600" />
         </Item>
@@ -66,14 +77,14 @@ const LogoutCard = () => {
     const logoutAction = useProfileAction("logout");
     const onLogoutPress = useCallback(() => {
         Alert.alert(
-            "Are you sure you want to logout?",
+            $t("logoutConfirmationMessage"),
             "", [
             {
-                text: "Cancel",
+                text: $t("logoutConfirmationCancelButton"),
                 style: "cancel"
             },
             {
-                text: "OK",
+                text: $t("logoutConfirmationOkButton"),
                 style: "default",
                 onPress: () => logoutAction()
             }
@@ -85,7 +96,7 @@ const LogoutCard = () => {
             <Item onPress={onLogoutPress}>
                 <Item.Icon name="fa-lock" color="error/600" />
                 <Item.Content>
-                    <Text variant="p1b" color="error/600">Logout</Text>
+                    <Text variant="p1b" color="error/600">{$t("logoutButton")}</Text>
                 </Item.Content>
             </Item>
         </Card>);
