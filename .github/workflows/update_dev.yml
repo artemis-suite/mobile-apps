@@ -19,5 +19,7 @@ jobs:
         run: yarn install
       - name: export
         run: yarn app expo export --public-url "$OTA_URL" --non-interactive
+      - name: select project
+        run: yarn app fb:use dev
       - name: publish
-        run: yarn app ota
+        run: yarn app fb:deploy
