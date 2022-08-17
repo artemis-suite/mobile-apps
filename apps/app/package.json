@@ -8,9 +8,9 @@
     "ios": "react-native-asset && expo run:ios",
     "ios:pod": "npx pod-install",
     "ios:clean": "cd ios && xcodebuild -workspace app.xcworkspace -scheme app clean && cd ../",
-    "assets": "react-native-asset",
     "web": "expo start --web",
-    "ota": "firebase deploy"
+    "fb:use": "firebase use",
+    "fb:deploy": "firebase deploy"
   },
   "dependencies": {
     "@artemis-mobile/elements": "1.0.0",
